@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+	<centre>
+	<h1> List of customers</h1>
+
+	<br/>
+			{% for customer in customer_list %}
+				<a href="{% url 'show_customer_details'  
+				customer.id %}">{{ customer }}<a/><br/>
+			{% endfor %}
+	
+
+	
+
+{% endblock %}
