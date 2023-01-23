@@ -41,8 +41,8 @@ def index(request):
 
 
 def show_customer_details(request, customer_id):
-	customer = Customer.objects.get(pk=customer_id)
-	return render(request, 'show_customer_details.html', {'customer': customer})
+	customer_info = Customer.objects.get(pk=customer_id)
+	return render(request, 'show_customer_details.html', {'customer_info': customer_info})
 
 def list_customers(request):
 	customer_list = Customer.objects.all()
